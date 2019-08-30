@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.22.0",
     "autoprefixer": "7.1.2",
     "axios": "^0.16.2",
     "babel-core": "6.25.0",
@@ -37,6 +38,7 @@
     "postcss-loader": "2.0.6",
     "promise": "8.0.1",
     "prop-types": "^15.7.2",
+    "rc-queue-anim": "^1.7.0",
     "react": "^16.0.0-rc.2",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^16.0.0-rc.2",
@@ -62,7 +64,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "server": "node server/server.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -113,7 +116,15 @@
     ]
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "eqeqeq": [
+        "off"
+      ],
+      "jsx-ally/accessible-emoji": [
+        0
+      ]
+    }
   },
   "proxy": "http://localhost:9093"
 }
